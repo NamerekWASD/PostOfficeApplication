@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="788.0" prefWidth="1383.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.namerek.core.PresentationLayer.Controllers.OrderController">
+   <children>
+      <GridPane prefHeight="775.0" prefWidth="1115.0" VBox.vgrow="ALWAYS">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="303.0" minWidth="0.0" prefWidth="0.0" />
+            <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="898.0" minWidth="10.0" prefWidth="730.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="633.0" minWidth="0.0" prefWidth="632.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="594.0" minWidth="10.0" prefWidth="21.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="50.0" minHeight="0.0" prefHeight="0.0" valignment="CENTER" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="534.0" minHeight="10.0" prefHeight="534.0" valignment="CENTER" vgrow="ALWAYS" />
+          <RowConstraints maxHeight="71.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <AnchorPane prefHeight="534.0" prefWidth="844.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <children>
+                  <Pane layoutX="11.0" layoutY="37.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadada" height="314.0" layoutX="532.0" stroke="BLACK" strokeDashOffset="5.0" strokeType="INSIDE" strokeWidth="0.5" width="168.0">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Rectangle>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadada" height="314.0" layoutX="364.0" stroke="BLACK" strokeDashOffset="5.0" strokeType="INSIDE" strokeWidth="0.5" width="168.0">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Rectangle>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadada" height="314.0" layoutX="182.0" stroke="BLACK" strokeDashOffset="5.0" strokeType="INSIDE" strokeWidth="0.5" width="182.0">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Rectangle>
+                        <Text layoutX="373.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sender info" textAlignment="CENTER" wrappingWidth="149.41015625">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="541.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receiver info" textAlignment="CENTER" wrappingWidth="149.41015625">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                        <GridPane layoutX="373.0" layoutY="65.0" prefHeight="239.0" prefWidth="150.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="senderName" promptText="Name" />
+                              <TextField fx:id="senderLastName" promptText="Last name" GridPane.rowIndex="1" />
+                              <TextField fx:id="senderPhoneNumber" promptText="Phone number" GridPane.rowIndex="2" />
+                              <TextField fx:id="senderEDRPOU" promptText="EDRPOU (optional)" GridPane.rowIndex="4" />
+                              <ComboBox fx:id="senderStatus" editable="true" prefWidth="150.0" promptText="Personal status" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <GridPane layoutX="541.0" layoutY="65.0" prefHeight="239.0" prefWidth="150.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="receiverName" promptText="Name" />
+                              <TextField fx:id="receiverLastName" promptText="Last name" GridPane.rowIndex="1" />
+                              <TextField fx:id="receiverPhoneNumber" promptText="Phone number" GridPane.rowIndex="2" />
+                              <TextField fx:id="receiverEDRPOU" promptText="EDRPOU (optional)" GridPane.rowIndex="4" />
+                              <ComboBox fx:id="receiverStatus" editable="true" prefWidth="150.0" promptText="Personal status" GridPane.rowIndex="3" />
+                           </children>
+                        </GridPane>
+                        <Text layoutX="200.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination" textAlignment="CENTER" wrappingWidth="149.41015625">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                        <GridPane layoutX="198.0" layoutY="66.0" prefHeight="239.0" prefWidth="150.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="countryD" promptText="Country" GridPane.rowIndex="2" />
+                              <TextField fx:id="cityD" promptText="City" GridPane.rowIndex="3" />
+                              <TextField fx:id="streetD" promptText="Street" GridPane.rowIndex="4" />
+                              <TextField fx:id="postalCodeD" promptText="Postal code" GridPane.rowIndex="6" />
+                              <CheckBox fx:id="isPostOfficeD" mnemonicParsing="false" text="Is post office" textOverrun="CENTER_ELLIPSIS" />
+                              <ComboBox fx:id="postOfficeNumberD" editable="true" prefWidth="150.0" promptText="Post office number" GridPane.rowIndex="1" />
+                              <TextField fx:id="buildingD" promptText="Building" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#dadada" height="314.0" stroke="BLACK" strokeDashOffset="5.0" strokeType="INSIDE" strokeWidth="0.5" width="182.0">
+                           <cursor>
+                              <Cursor fx:constant="DEFAULT" />
+                           </cursor>
+                        </Rectangle>
+                        <Text layoutX="16.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Departure point" textAlignment="CENTER" wrappingWidth="149.41015625">
+                           <font>
+                              <Font size="21.0" />
+                           </font>
+                        </Text>
+                        <GridPane layoutX="16.0" layoutY="66.0" prefHeight="239.0" prefWidth="150.0">
+                           <columnConstraints>
+                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
+                           </columnConstraints>
+                           <rowConstraints>
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                              <RowConstraints minHeight="10.0" vgrow="SOMETIMES" />
+                           </rowConstraints>
+                           <children>
+                              <TextField fx:id="countryDP" promptText="Country" GridPane.rowIndex="2" />
+                              <TextField fx:id="cityDP" promptText="City" GridPane.rowIndex="3" />
+                              <TextField fx:id="streetDP" promptText="Street" GridPane.rowIndex="4" />
+                              <TextField fx:id="postalCodeDP" promptText="Postal code" GridPane.rowIndex="6" />
+                              <CheckBox fx:id="isPostOfficeDP" mnemonicParsing="false" text="Is post office" textOverrun="CENTER_ELLIPSIS" />
+                              <ComboBox fx:id="postOfficeNumberDP" editable="true" prefWidth="150.0" promptText="Post office number" GridPane.rowIndex="1" />
+                              <TextField fx:id="buildingDP" promptText="Building" GridPane.rowIndex="5" />
+                           </children>
+                        </GridPane>
+                     </children>
+                  </Pane>
+                  <Text layoutX="88.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Track number" textAlignment="CENTER" wrappingWidth="82.41015625" />
+                  <TextField fx:id="trackNumber" editable="false" layoutX="88.0" layoutY="384.0" prefHeight="25.0" prefWidth="149.0" promptText="Track number" />
+                  <Button layoutX="594.0" layoutY="458.0" mnemonicParsing="false" onAction="#saveOrder" prefHeight="56.0" prefWidth="117.0" text="Save" />
+                  <Button layoutX="340.0" layoutY="458.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="56.0" prefWidth="117.0" text="Back to main" />
+                  <Text layoutX="88.0" layoutY="427.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order cost" textAlignment="CENTER" wrappingWidth="67.41015625" />
+                  <TextField fx:id="orderCost" editable="false" layoutX="88.0" layoutY="433.0" prefHeight="25.0" prefWidth="149.0" promptText="Cost" />
+                  <Text layoutX="258.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Status" textAlignment="CENTER" wrappingWidth="43.41015625" />
+                  <ComboBox fx:id="orderStatusComboBox" editable="true" layoutX="258.0" layoutY="384.0" prefHeight="25.0" prefWidth="149.0" promptText="Status" />
+                  <Button layoutX="467.0" layoutY="458.0" mnemonicParsing="false" onAction="#deleteOrder" prefHeight="56.0" prefWidth="117.0" text="Delete order" />
+               </children>
+            </AnchorPane>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Order" textAlignment="CENTER" wrappingWidth="149.41015625" GridPane.columnIndex="1">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Text>
+            <TableView fx:id="packages" prefHeight="286.0" prefWidth="582.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <columns>
+                  <TableColumn fx:id="packageSize" prefWidth="121.0" text="Size" />
+                  <TableColumn fx:id="packageWeight" prefWidth="101.0" text="Weight" />
+                  <TableColumn fx:id="packageCategory" prefWidth="83.0" text="Category" />
+                  <TableColumn fx:id="packageContent" prefWidth="102.0" text="Content" />
+                  <TableColumn fx:id="packageDescription" prefWidth="124.0" text="Description" />
+                  <TableColumn fx:id="packageEvaluativeCost" prefWidth="100.0" text="Evaluative cost" />
+               </columns>
+            </TableView>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

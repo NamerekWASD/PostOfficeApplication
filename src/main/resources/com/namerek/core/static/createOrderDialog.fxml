@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="796.0" prefWidth="1395.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.namerek.core.PresentationLayer.Controllers.OrderController">
+   <children>
+      <GridPane prefHeight="796.0" prefWidth="1356.0" VBox.vgrow="ALWAYS">
+        <columnConstraints>
+            <ColumnConstraints hgrow="NEVER" maxWidth="95.0" minWidth="10.0" prefWidth="20.0" />
+          <ColumnConstraints hgrow="NEVER" maxWidth="1351.0" minWidth="10.0" prefWidth="1351.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="61.0" minWidth="0.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <GridPane alignment="CENTER" prefHeight="736.0" prefWidth="1279.0" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="1092.0" minWidth="10.0" prefWidth="674.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="703.0" minWidth="10.0" prefWidth="452.0" />
+                  <ColumnConstraints halignment="CENTER" hgrow="NEVER" maxWidth="703.0" minWidth="10.0" prefWidth="225.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints maxHeight="298.0" minHeight="10.0" prefHeight="82.0" vgrow="SOMETIMES" />
+                <RowConstraints maxHeight="508.0" minHeight="10.0" prefHeight="474.0" vgrow="NEVER" />
+                <RowConstraints maxHeight="364.0" minHeight="0.0" prefHeight="55.0" vgrow="NEVER" />
+                  <RowConstraints maxHeight="168.0" minHeight="10.0" prefHeight="132.0" valignment="CENTER" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <AnchorPane prefHeight="80.0" prefWidth="676.0" />
+                  <TableView fx:id="packages" prefHeight="286.0" prefWidth="582.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <columns>
+                      <TableColumn fx:id="packageWeight" prefWidth="71.0" text="Weight" />
+                        <TableColumn fx:id="packageCategory" prefWidth="83.0" text="Category" />
+                        <TableColumn fx:id="packageContent" prefWidth="98.0" text="Content" />
+                        <TableColumn fx:id="packageDescription" prefWidth="85.0" text="Description" />
+                        <TableColumn fx:id="packageEvaluativeCost" prefWidth="95.0" text="Evaluative cost" />
+                    </columns>
+                  </TableView>
+                  <AnchorPane prefHeight="333.0" prefWidth="513.0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                     <children>
+                        <TextField fx:id="receiverPhoneNumber" layoutX="196.0" layoutY="61.0" prefHeight="25.0" prefWidth="152.0" promptText="63 12 34 567" />
+                        <Text layoutX="60.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sender">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <Text layoutX="225.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Receiver">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="senderPhoneNumber" layoutX="23.0" layoutY="61.0" promptText="63 12 34 567" />
+                        <TextField fx:id="senderName" disable="true" layoutX="21.0" layoutY="100.0" prefHeight="26.0" prefWidth="152.0" promptText="Name" />
+                        <TextField fx:id="receiverName" disable="true" layoutX="196.0" layoutY="100.0" promptText="Name" />
+                        <TextField fx:id="senderLastName" disable="true" layoutX="21.0" layoutY="138.0" prefHeight="26.0" prefWidth="152.0" promptText="Last name" />
+                        <TextField fx:id="receiverLastName" disable="true" layoutX="195.0" layoutY="139.0" promptText="Last name" />
+                        <TextField fx:id="senderEDRPOU" disable="true" layoutX="20.0" layoutY="219.0" prefHeight="26.0" prefWidth="152.0" promptText="EDRPOU (optional)" />
+                        <TextField fx:id="receiverEDRPOU" disable="true" layoutX="195.0" layoutY="219.0" prefHeight="26.0" prefWidth="152.0" promptText="EDRPOU (optional)" />
+                        <Text layoutX="535.0" layoutY="38.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Destination">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="countryD" layoutX="521.0" layoutY="126.0" promptText="Country" />
+                        <TextField fx:id="cityD" layoutX="520.0" layoutY="165.0" prefHeight="25.0" prefWidth="149.0" promptText="City" />
+                        <TextField fx:id="streetD" layoutX="520.0" layoutY="207.0" promptText="Street" />
+                        <TextField fx:id="postalCodeD" layoutX="520.0" layoutY="282.0" prefHeight="3.0" prefWidth="149.0" promptText="Postal code" />
+                        <TextField fx:id="buildingD" layoutX="520.0" layoutY="245.0" promptText="Building" />
+                        <CheckBox fx:id="isPostOfficeD" layoutX="521.0" layoutY="96.0" mnemonicParsing="false" text="Is post office" textOverrun="CENTER_ELLIPSIS" />
+                        <ComboBox fx:id="postOfficeNumberD" editable="true" layoutX="521.0" layoutY="62.0" onShowing="#getPostOffices" prefWidth="150.0" promptText="Post office number" />
+                        <ComboBox fx:id="senderStatus" disable="true" editable="true" layoutX="22.0" layoutY="178.0" prefWidth="150.0" promptText="Personal status" />
+                        <ComboBox fx:id="receiverStatus" disable="true" editable="true" layoutX="195.0" layoutY="178.0" prefWidth="150.0" promptText="Personal status" />
+                        <Button fx:id="findSender" layoutX="14.0" layoutY="258.0" mnemonicParsing="false" onAction="#tryFindFromDBSender" prefHeight="25.0" prefWidth="56.0" text="Find" />
+                        <Button fx:id="findReceiver" layoutX="197.0" layoutY="258.0" mnemonicParsing="false" onAction="#tryFindFromDBReceiver" prefHeight="25.0" prefWidth="56.0" text="Find" />
+                        <Button fx:id="createNewReceiver" layoutX="292.0" layoutY="258.0" mnemonicParsing="false" onAction="#createNewR" prefHeight="25.0" prefWidth="56.0" text="Create" />
+                        <Button fx:id="createNewSender" layoutX="116.0" layoutY="258.0" mnemonicParsing="false" onAction="#createNewS" prefHeight="25.0" prefWidth="56.0" text="Create" />
+                        <Button fx:id="send" alignment="CENTER" layoutX="521.0" layoutY="363.0" mnemonicParsing="false" onAction="#sendOrder" prefHeight="56.0" prefWidth="135.0" text="Send" textAlignment="CENTER" />
+                        <Text layoutX="351.0" layoutY="37.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Departure point">
+                           <font>
+                              <Font size="24.0" />
+                           </font>
+                        </Text>
+                        <TextField fx:id="countryDP" layoutX="360.0" layoutY="126.0" promptText="Country" />
+                        <TextField fx:id="cityDP" layoutX="359.0" layoutY="165.0" prefHeight="25.0" prefWidth="149.0" promptText="City" />
+                        <TextField fx:id="streetDP" layoutX="359.0" layoutY="207.0" promptText="Street" />
+                        <TextField fx:id="postalCodeDP" layoutX="359.0" layoutY="282.0" prefHeight="3.0" prefWidth="149.0" promptText="Postal code" />
+                        <TextField fx:id="buildingDP" layoutX="359.0" layoutY="245.0" promptText="Building" />
+                        <CheckBox fx:id="isPostOfficeDP" layoutX="360.0" layoutY="96.0" mnemonicParsing="false" text="Is post office" textOverrun="CENTER_ELLIPSIS" />
+                        <ComboBox fx:id="postOfficeNumberDP" editable="true" layoutX="360.0" layoutY="62.0" onShowing="#getPostOffices" prefHeight="25.0" prefWidth="149.0" promptText="Post office number" />
+                        <Button layoutX="455.0" layoutY="92.0" mnemonicParsing="false" onAction="#findPostOfficeDP" prefHeight="25.0" prefWidth="54.0" text="Fill" />
+                        <Button layoutX="616.0" layoutY="92.0" mnemonicParsing="false" onAction="#findPostOfficeD" prefHeight="25.0" prefWidth="54.0" text="Fill" />
+                        <Button layoutX="359.0" layoutY="363.0" mnemonicParsing="false" onAction="#backToMain" prefHeight="56.0" prefWidth="135.0" text="Back to main" />
+                     </children>
+                  </AnchorPane>
+                  <GridPane prefHeight="72.0" prefWidth="645.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="93.0" minWidth="10.0" prefWidth="83.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="10.0" prefWidth="96.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="204.0" minWidth="6.0" prefWidth="108.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="199.0" minWidth="10.0" prefWidth="96.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="108.0" minWidth="10.0" prefWidth="107.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="weight" promptText="Weight" />
+                        <TextField fx:id="category" promptText="Category" GridPane.columnIndex="1" />
+                        <TextField prefWidth="159.0" promptText="Content" GridPane.columnIndex="3" />
+                        <TextField fx:id="description" promptText="Description" GridPane.columnIndex="3" />
+                        <TextField fx:id="evaluativeCost" prefHeight="25.0" prefWidth="128.0" promptText="Evaluative cost" GridPane.columnIndex="4" />
+                        <TextField fx:id="content" promptText="Content" GridPane.columnIndex="2" />
+                     </children>
+                  </GridPane>
+                  <TableView fx:id="packageSizeTable" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <columns>
+                      <TableColumn fx:id="packageWidth" prefWidth="76.0" text="Width" />
+                      <TableColumn fx:id="packageLength" prefWidth="65.0" text="Length" />
+                        <TableColumn fx:id="packageHeight" prefWidth="84.0" text="Height" />
+                    </columns>
+                  </TableView>
+                  <GridPane prefHeight="53.0" prefWidth="202.0" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                    <columnConstraints>
+                      <ColumnConstraints hgrow="ALWAYS" maxWidth="84.0" minWidth="10.0" prefWidth="59.0" />
+                      <ColumnConstraints hgrow="ALWAYS" maxWidth="66.0" minWidth="10.0" prefWidth="57.0" />
+                        <ColumnConstraints maxWidth="65.0" minWidth="55.0" prefWidth="65.0" />
+                        <ColumnConstraints maxWidth="59.0" minWidth="54.0" prefWidth="54.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="NEVER" />
+                    </rowConstraints>
+                     <children>
+                        <TextField fx:id="width" promptText="Width" />
+                        <TextField fx:id="height" prefHeight="25.0" prefWidth="76.0" promptText="Height" GridPane.columnIndex="2" />
+                        <TextField fx:id="length" prefHeight="25.0" prefWidth="57.0" promptText="Length" GridPane.columnIndex="1" />
+                        <Button alignment="CENTER" mnemonicParsing="false" onAction="#addPackageToTable" prefHeight="25.0" prefWidth="69.0" text="Add" GridPane.columnIndex="3" />
+                     </children>
+                  </GridPane>
+               </children>
+            </GridPane>
+         </children>
+      </GridPane>
+   </children>
+</VBox>

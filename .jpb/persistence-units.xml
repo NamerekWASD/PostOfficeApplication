@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PersistenceUnitSettings">
+    <persistence-units>
+      <persistence-unit name="Entities" persistenceXmlPath="Entities">
+        <packages>
+          <package value="com.namerek.core.Entities" />
+        </packages>
+      </persistence-unit>
+      <persistence-unit name="PostOfficeDB" persistenceXmlPath="src/main/resources/com/namerek/core/META-INF/persistence.xml">
+        <packages>
+          <package value="com.namerek.core" />
+        </packages>
+        <entities>
+          <entity value="com.namerek.core.Entities.Cell" />
+          <entity value="com.namerek.core.Entities.Description" />
+          <entity value="com.namerek.core.Entities.Employee" />
+          <entity value="com.namerek.core.Entities.Client" />
+          <entity value="com.namerek.core.Entities.Order" />
+          <entity value="com.namerek.core.Entities.Package" />
+          <entity value="com.namerek.core.Entities.PostOffice" />
+        </entities>
+      </persistence-unit>
+    </persistence-units>
+  </component>
+</project>

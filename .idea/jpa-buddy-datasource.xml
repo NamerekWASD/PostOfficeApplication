@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="JpbDataSourceConfig">
+    <data-sources>
+      <data-source id="3849d2e5-0490-4e41-91d5-c4bc3539684f" name="PostOfficeApplication" url="jdbc:oracle:thin:@//localhost/xe" driverClass="oracle.jdbc.OracleDriver" />
+    </data-sources>
+    <data-source-infos>
+      <data-source-info id="3849d2e5-0490-4e41-91d5-c4bc3539684f" persistence-unit-name="Entities" />
+      <data-source-info id="3849d2e5-0490-4e41-91d5-c4bc3539684f" persistence-unit-name="PostOfficeDB" />
+    </data-source-infos>
+  </component>
+</project>
